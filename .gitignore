@@ -1,6 +1,0 @@
-# Archivos y directorios del entorno virtual
-pps/
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
