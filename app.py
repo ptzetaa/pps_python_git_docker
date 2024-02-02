@@ -5,7 +5,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Hola mundo'
+    frases = frotar(3)  # Prueba con 3 frases aleatorias
+    return jsonify({"mensaje": "Hola mundo", "frases": frases})
 
 @app.route('/frotar/<int:n_frases>', methods=['GET'])
 def frotar_endpoint(n_frases):
