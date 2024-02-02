@@ -6,13 +6,13 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     # Llama a la función frotar sin limitar la cantidad de frases
-    resultadofrotar = frotar()
+    frases_auspiciosas = frotar()
 
     # Devuelve una frase auspiciosa aleatoria en la respuesta de la ruta raíz
-    return resultadofrotar[0]['frase']
+    return jsonify({"frase": frases_auspiciosas[0]})
 
-@app.route('/frotar/<int:nfrases>', methods=['GET'])
-def obtenerfrases(n_frases):
+@app.route('/frotar/<int:n_frases>', methods=['GET'])
+def obtener_frases(n_frases):
     frases = frotar(n_frases)
     return jsonify({"frases": frases})
 
