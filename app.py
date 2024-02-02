@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify
 from bayeta import frotar
 
 app = Flask(__name__)
@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/')
 def hello_world():
     frase = frotar(1)[0]
-    return render_template('index.html', frase=frase)
+    return f"<html><body>{frase}</body></html>"
 
 @app.route('/frotar/<int:n_frases>', methods=['GET'])
 def frotar_endpoint(n_frases):
@@ -15,7 +15,7 @@ def frotar_endpoint(n_frases):
         return jsonify({"frases": frases})
     else:
         frase = frotar(1)[0]
-        return render_template('index.html', frase=frase)
+        return f"<html><body>{frase}</body></html>"
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000, debug=True)
