@@ -26,6 +26,7 @@ def inicializar(cliente, datos):
     if frases_auspiciosas.count_documents({}) == 0:
         # Inserción de datos
         frases_auspiciosas.insert_many(datos)
+        print("Datos inicializados correctamente.")
 
 def consultar(cliente, n_frases):
     bd = cliente['bayeta']
