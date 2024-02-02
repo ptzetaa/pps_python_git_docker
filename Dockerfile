@@ -21,5 +21,8 @@ COPY . .
 # Comando para inicializar la base de datos
 CMD ["python", "moodle.py"]
 
+# Comando para inicializar la base de datos
+CMD ["python", "bayeta.py"]
+
 # Comando para ejecutar la aplicación después de la inicialización
 CMD ["python", "app.py"]
