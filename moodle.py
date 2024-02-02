@@ -35,3 +35,9 @@ def consultar(cliente, n_frases):
     
     # Retornar las frases
     return frases_aleatorias
+
+if __name__ == "__main__":
+    # Si ejecutas este archivo directamente, se inicializarán los datos en MongoDB
+    cliente = instanciar()
+    inicializar(cliente)
+    cliente.close()
