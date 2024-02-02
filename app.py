@@ -10,12 +10,11 @@ def hello_world():
 
 @app.route('/frotar/<int:n_frases>', methods=['GET'])
 def frotar_endpoint(n_frases):
-    if n_frases == 1:
+    if n_frases > 0:
         frases = frotar(n_frases)
         return jsonify({"frases": frases})
     else:
-        frase = frotar(1)[0]
-        return f"<html><body>{frase}</body></html>"
+        return "Número de frases debe ser mayor a 0"
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000, debug=True)
