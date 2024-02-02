@@ -18,9 +18,6 @@ COPY --from=base /usr/local/lib/python3.8/site-packages /usr/local/lib/python3.8
 
 COPY . .
 
-# Instalamos mongodb para poder ejecutar los comandos de inicialización
-RUN apt-get update && apt-get install -y mongodb
-
 # Comando para inicializar la base de datos
 CMD ["python", "moodle.py"]
 
