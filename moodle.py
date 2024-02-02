@@ -16,7 +16,7 @@ datos = [
 ]
 
 def instanciar():
-    return MongoClient('mongodb://mongo:27017/')
+    return MongoClient('mongodb://localhost:27017/')
 
 def inicializar(cliente, datos):
     bd = cliente['bayeta']
