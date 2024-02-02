@@ -1,17 +1,26 @@
+# app.py
+
 from flask import Flask, jsonify
-from bayeta import frotar
+from moodle import instanciar, consultar
 
 app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    frase = frotar(1)[0]
+    # Llamar a la función de consulta con una frase
+    cliente_mongo = instanciar()
+    frase = consultar(cliente_mongo, 1)[0]
+    cliente_mongo.close()
+
     return f"<html><body>{frase}</body></html>"
 
 @app.route('/frotar/<int:n_frases>', methods=['GET'])
 def frotar_endpoint(n_frases):
     if n_frases > 0:
-        frases = frotar(n_frases)
+        # Llamar a la función de consulta con N frases y devolver en formato JSON
+        cliente_mongo = instanciar()
+        frases = consultar(cliente_mongo, n_frases)
+        cliente_mongo.close()
         return jsonify({"frases": frases})
     else:
         return "Número de frases debe ser mayor a 0"
