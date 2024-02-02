@@ -1,1 +1,1 @@
-print("Hola, mundo")
+from bayeta import frotar
