@@ -1,5 +1,4 @@
 # bayeta.py
-
 from moodle import instanciar, consultar
 
 def frotar(n_frases: int = 1):
