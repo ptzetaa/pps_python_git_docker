@@ -2,7 +2,7 @@
 from pymongo import MongoClient
 
 def instanciar():
-    return MongoClient('mongodb://mongo:27017/')
+    return MongoClient('mongodb://172.17.0.2:27017/')
 
 def inicializar(cliente):
     bd = cliente['bayeta']
