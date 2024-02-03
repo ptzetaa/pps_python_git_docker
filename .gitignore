@@ -1,5 +1,5 @@
 # Archivos y directorios del entorno virtual
-pps/
+venv/
 __pycache__/
 *.pyc
 *.pyo

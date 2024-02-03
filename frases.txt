@@ -1,5 +1,15 @@
-Esta es una frase de ejemplo.
-Otra frase interesante.
-Python es un lenguaje de programación versátil.
-Flask es un framework web para Python.
-Hola, mundo. ¡Bienvenido a mi aplicación!
+La gratitud transforma lo que tenemos en suficiente.
+El optimismo es la fe que conduce al logro.
+La sonrisa es la llave que abre muchos corazones.
+La paciencia es la fortaleza del alma.
+La bondad es el lenguaje que los sordos pueden escuchar y los ciegos pueden ver.
+El aprendizaje es un regalo. Incluso cuando el dolor es tu maestro.
+La vida es 10% lo que nos sucede y 90% cómo reaccionamos ante ello.
+El respeto es uno de los mayores regalos que puedes dar a alguien.
+La alegría no es enriquecerse sino en hacer el bien.
+El amor propio es el mejor regalo que puedes darte a ti mismo.
+La felicidad no es algo que pospones para el futuro; es algo que diseñas para el presente.
+La amabilidad es la moneda que todos deberíamos usar más a menudo.
+La imaginación es más importante que el conocimiento.
+La persistencia puede cambiar un fracaso en un extraordinario logro.
+El único modo de hacer un amigo es ser uno.
