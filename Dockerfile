@@ -1,28 +1,30 @@
-# Dockerfile
-
-# Fase de resolución de dependencias
-FROM python:3.8-slim as base
+# Etapa de construcción para resolver dependencias
+FROM python:3.10-slim AS builder
 
 WORKDIR /app
 
+# Transferir solo los archivos necesarios para resolver dependencias
 COPY requirements.txt .
 
-RUN pip install --no-cache-dir -r requirements.txt
+# Instalar dependencias en un entorno virtual
+RUN python -m venv venv && \
+    venv/bin/pip install --no-cache-dir -r requirements.txt
 
-# Fase de ejecución
-FROM python:3.8-slim as runtime
+# Etapa de ejecución
+FROM python:3.10-slim AS runner
 
 WORKDIR /app
 
-COPY --from=base /usr/local/lib/python3.8/site-packages /usr/local/lib/python3.8/site-packages
-
+# Transferir el entorno virtual y la aplicación desde la etapa de construcción
+COPY --from=builder /app/venv venv
 COPY . .
 
-# Comando para inicializar la base de datos
-CMD ["python", "moodle.py"]
+# Transferir archivos esenciales para la aplicación
+COPY bayeta.py .
+COPY frases.txt .
+COPY moodle.py .
 
-# Comando para inicializar la base de datos
-CMD ["python", "bayeta.py"]
+COPY panda.png /app/static/panda.png
 
-# Comando para ejecutar la aplicación después de la inicialización
-CMD ["python", "app.py"]
+# Comando para ejecutar la aplicación
+CMD ["venv/bin/python", "app.py"]
