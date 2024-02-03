@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: .
+    image: bayeta
+    container_name: bayeta-container
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongodb-container
+    networks:
+      - bayeta-network
+
+  mongodb-container:
+    image: mongo
+    container_name: mongodb-container
+    volumes:
+      - mongodb-data:/data/db
+    ports:
+      - "27017:27017"
+    networks:
+      - bayeta-network
+
+networks:
+  bayeta-network:
+    name: bayeta-network
+    driver: bridge
+
+volumes:
+  mongodb-data:
+    name: mongodb-data
