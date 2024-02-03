@@ -4,3 +4,5 @@ __pycache__
 *.pyd
 pps
 docker-compose.yml
+data/
+db/
