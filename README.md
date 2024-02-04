@@ -16,7 +16,7 @@ Sigue estos pasos para ejecutar la aplicación en un contenedor Docker:
 
 ### 1. Clonar el Repositorio
 
-    git clone https://github.com/jvm-pps/pps_python_git_docker.git
+    git clone https://github.com/ptzetaa/pps_python_git_docker.git
     cd pps_python_git_docker
 
 ### 2. Iniciar el Contenedor
