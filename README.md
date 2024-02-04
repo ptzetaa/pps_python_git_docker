@@ -1,7 +1,3 @@
-<<<<<<< Updated upstream
-# pps_python_git_docker
-Esto es una aplicación al estilo de galleta de la fortuna/servilleta de bar v.6 ahora con docker y mongo
-=======
 # La Bayeta Mágica
 
 La Bayeta Mágica es una aplicación web simple que brinda frases de buen augurio de manera aleatoria cada vez que se accede al sitio.
@@ -59,4 +55,3 @@ Para agregar frases a la base de datos:
 ## Licencia
 
 Este proyecto está bajo la Licencia GPL-3.0 - consulta el archivo LICENSE para obtener más detalles.
->>>>>>> Stashed changes
